@@ -1,4 +1,4 @@
-<html>
+<html xmlns="http://www.w3.org/1999/html">
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,12 +68,12 @@ window.onload = function() {
          </header>
          <section class="h-dvh w-dvw max-h-[80rem] relative">
             <div class="absolute inset-0 z-[1]">
-               <img class="h-full w-full object-cover object-center" src="https://media.istockphoto.com/id/470062516/photo/strong-man.jpg?s=2048x2048&w=is&k=20&c=WVVPhFceGiTlJOkiXr00i0mtUHYEmC-pqIdiNqcUKfA=" alt="">
+               <img class="h-full w-full object-cover object-center" src="https://images.unsplash.com/photo-1606846633596-cbec284ed481?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
             </div>
             <div class="max-w-[120rem] mx-auto h-full relative z-[2] px-6 md:px-8 lg:px-10">
                <div class="h-full w-full flex flex-col relative space-y-6">
                   <div class="mt-auto mb-0 text-gray-50 md:pb-36 space-y-6">
-                     <h2 class="font-dark text-2xl text-accent-700">Welcome to Fit</h2>
+                     <h2 class="font-dark text-3xl font-bold text-accent-700">Welcome to Fit</h2>
                      <h1 class="text-3xl md:text-5xl max-w-[30rem] font-medium">The body achieves what the mind believes.</h1>
                      <p class="max-w-[30rem] font-light ml-4 before:content-[''] relative before:absolute before:w-px before:h-full before:left-0 before:top-0 before:-translate-x-4 before:bg-accent-500 md:text-base text-sm"> Let AI be your personal trainer</p>
                      <div class="md:flex-row flex-col flex gap-4">
@@ -132,7 +132,7 @@ window.onload = function() {
                   </a>
                   <div class="flex-1 relative hidden md:flex items-center justify-center">
                      <ul class="mx-auto inline-flex gap-6 text-sm font-light">
-                        <li><a href="">Welcome</a></li>
+                        <li><a href="#welcome"onclick="showSection('welcome')">Welcome</a></li>
                         <li><a class="font-bold relative after:h-px after:content-[''] after:w-full after:absolute after:top-full after:bg-accent-500 after:left-0 after:translate-y-1" href="#about" onclick="showSection('about')">Who are we?</a></li>
                         <li><a href="#plans" onclick="showSection('plans')">Plans</a></li>
                         <li><a href="#mission"onclick="showSection('mission')">Mission</a></li>
@@ -146,7 +146,7 @@ window.onload = function() {
          </header>
          <section class="h-dvh w-dvw max-h-[80rem] relative">
             <div class="absolute inset-0 z-[1]">
-               <img class="h-full w-full object-cover object-center" src="https://media.istockphoto.com/id/470062516/photo/strong-man.jpg?s=2048x2048&w=is&k=20&c=WVVPhFceGiTlJOkiXr00i0mtUHYEmC-pqIdiNqcUKfA=" alt="">
+               <img class="h-full w-full object-cover object-center" src="https://images.unsplash.com/photo-1605296867724-fa87a8ef53fd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
             </div>
             <div class="max-w-[120rem] mx-auto h-full relative z-[2] px-6 md:px-8 lg:px-10">
                <div class="h-full w-full  flex flex-col relative space-y-6">
@@ -193,242 +193,290 @@ window.onload = function() {
       </div>
    </section>
 
-   <section id="plans" class="hidden">
-      <div i>
-         <header class="w-dvw absolute top-0 left-1/2 -translate-x-1/2 z-[1000] py-4">
-            <div class="max-w-[120rem] text-gray-50 px-6 md:px-8 lg:px-10">
-               <nav class="w-full flex flex-row items-center font-sans">
-                  <a class="text-gray-50" href="/">
-                     <svg class="h-8 w-8" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="94" y="81" width="40" height="350" fill="currentColor"></rect>
-                        <rect x="264" y="81" width="40" height="350" fill="currentColor"></rect>
-                        <circle cx="199" cy="131" r="50" fill="currentColor"></circle>
-                        <circle cx="199" cy="246" r="50" fill="currentColor"></circle>
-                        <circle cx="369" cy="131" r="50" fill="currentColor"></circle>
-                        <circle cx="369" cy="246" r="50" fill="currentColor"></circle>
-                     </svg>
-                  </a>
-                  <div class="flex-1 relative hidden md:flex items-center justify-center">
-                     <ul class="mx-auto inline-flex gap-6 text-sm font-light">
-                        <li><a href="">Welcome</a></li>
-                        <li><a href="#about"onclick="showSection('about')">Who are we?</a></li>
-                        <li><a onclick="showSection('plans')" class="font-bold relative after:h-px after:content-[''] after:w-full after:absolute after:top-full after:bg-accent-500 after:left-0 after:translate-y-1" href="#plans">Plans</a></li>
-                        <li><a onclick="showSection('mission')" href="#mission">Mission</a></li>
-                     </ul>
-                     <ul class="absolute right-0">
-                        <li class="relative"><a class=" h-10 rounded-lg flex items-center justify-center text-base bg-accent-500 leading-none px-12 uppercase" href="">Contact</a></li>
-                     </ul>
+   <section id="plans" class="hidden ">
+   <div i>
+      <header class="w-dvw absolute top-0 left-1/2 -translate-x-1/2 z-[1000] py-4">
+         <div class="max-w-[120rem] text-gray-50 px-6 md:px-8 lg:px-10">
+            <nav class="w-full flex flex-row items-center font-sans">
+               <a class="text-gray-50" href="/">
+                  <svg class="h-8 w-8" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <rect x="94" y="81" width="40" height="350" fill="currentColor"></rect>
+                     <rect x="264" y="81" width="40" height="350" fill="currentColor"></rect>
+                     <circle cx="199" cy="131" r="50" fill="currentColor"></circle>
+                     <circle cx="199" cy="246" r="50" fill="currentColor"></circle>
+                     <circle cx="369" cy="131" r="50" fill="currentColor"></circle>
+                     <circle cx="369" cy="246" r="50" fill="currentColor"></circle>
+                  </svg>
+               </a>
+               <div class="flex-1 relative hidden md:flex items-center justify-center">
+                  <ul class="mx-auto inline-flex gap-6 text-sm font-light">
+                     <li><a href="#welcome" onclick="showSection('welcome')">Welcome</a></li>
+                     <li><a href="#about"onclick="showSection('about')">Who are we?</a></li>
+                     <li><a onclick="showSection('plans')" class="font-bold relative after:h-px after:content-[''] after:w-full after:absolute after:top-full after:bg-accent-500 after:left-0 after:translate-y-1" href="#plans">Plans</a></li>
+                     <li><a onclick="showSection('mission')" href="#mission">Mission</a></li>
+                  </ul>
+                  <ul class="absolute right-0">
+                     <li class="relative"><a class=" h-10 rounded-lg flex items-center justify-center text-base bg-accent-500 leading-none px-12 uppercase" href="">Contact</a></li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+      </header>
+      <section class="h-dvh w-dvw max-h-[80rem] relative ">
+         <div class="absolute inset-0 z-[1]">
+            <img class="h-full w-full object-cover object-center" src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+         </div>
+         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6" style="position: relative; z-index: 10;">
+            <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+               <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white dark:text-white">Designed for Athletes like you</h2>
+            </div>
+            <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
+               <!-- Pricing Card -->
+               <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-white bg-transparent rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-transparent dark:text-white">
+                  <h3 class="mb-4 text-2xl font-semibold">Beginner</h3>
+                  <p class="font-dark text-white sm:text-lg dark:text-white"> Access essential workout tools and track your progress, all for free.</p>
+                  <div class="flex justify-center items-baseline my-8">
+                     <span class="mr-2 text-5xl font-extrabold">₹0</span>
+                     <span class="text-white dark:text-gray-400">/month</span>
                   </div>
-               </nav>
+                  <!-- List -->
+                  <ul role="list" class="mb-8 space-y-4 text-left">
+                     <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Limited workout plans</span>
+                     </li>
+                     <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Basic tracking (workout, calories)</span>
+                     </li>
+                     <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Ads supported</span>
+                     </li>
+                     <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Limited customer support</span>
+                     </li>
+                     <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>No Customizations</span>
+                     </li>
+                  </ul>
+                  <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-md font-medium text-black rounded-lg group bg-gradient-to-br from-orange-400 to-orange-900 group-hover:from-pink-500 group-hover:to-orange-400 hover:text- dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+                  <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-transparent dark:bg-transparent rounded-md group-hover:bg-opacity-0">
+                  Login
+                  </span>
+                  </button>
+               </div>
+               <!-- Pricing Card -->
+               <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-white bg-transparent rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-transparent dark:text-white">
+                  <h3 class="mb-4 text-2xl font-semibold">Pro</h3>
+                  <p class="font-dark text-white sm:text-lg dark:text-white">Unlock advanced workouts, meal plans, & AI coach to level up your game.</p>
+                  <div class="flex justify-center items-baseline my-8">
+                     <span class="mr-2 text-5xl font-extrabold">₹2000</span>
+                     <span class="text-white dark:text-gray-400">/month</span>
+                  </div>
+                  <!-- List -->
+                  <ul role="list" class="mb-8 space-y-4 text-left">
+                     <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Custom workout plans</span>
+                     </li>
+                     <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Nutrition and meal planning</span>
+                     </li>
+                     <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>In-depth progress reports</span>
+                     </li>
+                     <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Personalized coaching</span>
+                     </li>
+                     <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Ad-free experience</span>
+                     </li>
+                  </ul>
+                  <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-md font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-orange-400 to-orange-900 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+                  <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-transparent dark:bg-transparent rounded-md group-hover:bg-opacity-0">
+                  Get Started
+                  </span>
+                  </button>
+               </div>
+               <!-- Pricing Card -->
+               <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-white bg-transparent rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-transparent dark:text-white">
+                  <h3 class="mb-4 text-2xl font-semibold">Enterprise</h3>
+                  <p class="font-dark text-white sm:text-md dark:text-white">Offer customized training plans, analytics, & multi-user access to elevate your business.</p>
+                  <div class="flex justify-center items-baseline my-8">
+                     <span class="mr-2 text-5xl font-extrabold">₹12000</span>
+                     <span class="text-white dark:text-gray-400">/month</span>
+                  </div>
+                  <!-- List -->
+                  <ul role="list" class="mb-8 space-y-4 text-left">
+                     <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Multiple user access (e.g., for gym members)</span>
+                     </li>
+                     <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Customizable branding</span>
+                     </li>
+                     <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Advanced analytics dashboard for gym performance</span>
+                     </li>
+                     <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Premium support: <span class="font-semibold">36 months</span></span>
+                     </li>
+                  </ul>
+                  <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-md font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-orange-400 to-orange-900 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+                  <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-transparent dark:bg-transparent rounded-md group-hover:bg-opacity-0">
+                  Contact Us
+                  </span>
+                  </button>
+               </div>
             </div>
-         </header>
-         <section class="h-dvh w-dvw max-h-[80rem] relative">
-            <div class="absolute inset-0 z-[1]">
-               <img class="h-full w-full object-cover object-center" src="https://media.istockphoto.com/id/470062516/photo/strong-man.jpg?s=2048x2048&w=is&k=20&c=WVVPhFceGiTlJOkiXr00i0mtUHYEmC-pqIdiNqcUKfA=" alt="">
+         </div>
+      </section>
+   </div>
+   <section id="user-data" class="bg-black dark:bg-black pt-10" >
+      <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
+         <dl class="grid max-w-screen-md gap-8 mx-auto text-white sm:grid-cols-3 dark:text-white">
+            <div class="flex flex-col items-center justify-center">
+               <span class="mb-2 text-3xl md:text-4xl font-extrabold purecounter" data-purecounter-start="0" data-purecounter-end="1893" data-purecounter-duration="1">+</span>
+               <dd class="font-light text-white dark:text-white">Users</dd>
             </div>
-            <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6" style="position: relative; z-index: 10;">
-      <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white dark:text-white">Designed for Athletes like you</h2>
-      </div>
-      <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
-          <!-- Pricing Card -->
-          <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-white bg-transparent rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-transparent dark:text-white">
-              <h3 class="mb-4 text-2xl font-semibold">Beginner</h3>
-              <p class="font-dark text-white sm:text-lg dark:text-white"> Access essential workout tools and track your progress, all for free.</p>
-              <div class="flex justify-center items-baseline my-8">
-                  <span class="mr-2 text-5xl font-extrabold">₹0</span>
-                  <span class="text-white dark:text-gray-400">/month</span>
-              </div>
-              <!-- List -->
-              <ul role="list" class="mb-8 space-y-4 text-left">
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Limited workout plans</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Basic tracking (workout, calories)</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Ads supported</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Limited customer support</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>No Customizations</span>
-                  </li>
-              </ul>
-            <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-md font-medium text-black rounded-lg group bg-gradient-to-br from-orange-400 to-orange-900 group-hover:from-pink-500 group-hover:to-orange-400 hover:text- dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
-            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-transparent dark:bg-transparent rounded-md group-hover:bg-opacity-0">
-            Login
-            </span>
-            </button>
-          </div>
-          <!-- Pricing Card -->
-          <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-white bg-transparent rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-transparent dark:text-white">
-              <h3 class="mb-4 text-2xl font-semibold">Pro</h3>
-              <p class="font-dark text-white sm:text-lg dark:text-white">Unlock advanced workouts, meal plans, & AI coach to level up your game.</p>
-              <div class="flex justify-center items-baseline my-8">
-                  <span class="mr-2 text-5xl font-extrabold">₹2000</span>
-                  <span class="text-white dark:text-gray-400">/month</span>
-              </div>
-              <!-- List -->
-              <ul role="list" class="mb-8 space-y-4 text-left">
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Custom workout plans</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Nutrition and meal planning</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>In-depth progress reports</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Personalized coaching</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Ad-free experience</span>
-                  </li>
-              </ul>
-            <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-md font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-orange-400 to-orange-900 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
-            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-transparent dark:bg-transparent rounded-md group-hover:bg-opacity-0">
-            Get Started
-            </span>
-            </button>
-          </div>
-          <!-- Pricing Card -->
-          <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-white bg-transparent rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-transparent dark:text-white">
-              <h3 class="mb-4 text-2xl font-semibold">Enterprise</h3>
-              <p class="font-dark text-white sm:text-md dark:text-white">Offer customized training plans, analytics, & multi-user access to elevate your business.</p>
-              <div class="flex justify-center items-baseline my-8">
-                  <span class="mr-2 text-5xl font-extrabold">₹12000</span>
-                  <span class="text-white dark:text-gray-400">/month</span>
-              </div>
-              <!-- List -->
-              <ul role="list" class="mb-8 space-y-4 text-left">
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Multiple user access (e.g., for gym members)</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Customizable branding</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Advanced analytics dashboard for gym performance</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                      <!-- Icon -->
-                      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                      <span>Premium support: <span class="font-semibold">36 months</span></span>
-                  </li>
-              </ul>
-            <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-md font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-orange-400 to-orange-900 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
-            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-transparent dark:bg-transparent rounded-md group-hover:bg-opacity-0">
-            Contact Us
-            </span>
-            </button>
-          </div>
-      </div>
-  </div>
-         </section>
+            <div class="flex flex-col items-center justify-center">
+               <span class="mb-2 text-3xl md:text-4xl font-extrabold purecounter" data-purecounter-start="0" data-purecounter-end="9438" data-purecounter-duration="1">+</span>
+               <dd class="font-light text-white dark:text-white">Workouts Logged</dd>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+               <span class="mb-2 text-3xl md:text-4xl font-extrabold purecounter" data-purecounter-start="0" data-purecounter-end="19294" data-purecounter-duration="1">+</span>
+               <dd class="font-light text-white dark:text-white">Achievements</dd>
+            </div>
+         </dl>
       </div>
    </section>
+</section>
 
    <section id="mission" class="hidden">
-      <div i>
-         <header class="w-dvw absolute top-0 left-1/2 -translate-x-1/2 z-[1000] py-4">
-            <div class="max-w-[120rem] text-gray-50 px-6 md:px-8 lg:px-10">
-               <nav class="w-full flex flex-row items-center font-sans">
-                  <a class="text-gray-50" href="/">
-                     <svg class="h-8 w-8" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="94" y="81" width="40" height="350" fill="currentColor"></rect>
-                        <rect x="264" y="81" width="40" height="350" fill="currentColor"></rect>
-                        <circle cx="199" cy="131" r="50" fill="currentColor"></circle>
-                        <circle cx="199" cy="246" r="50" fill="currentColor"></circle>
-                        <circle cx="369" cy="131" r="50" fill="currentColor"></circle>
-                        <circle cx="369" cy="246" r="50" fill="currentColor"></circle>
-                     </svg>
-                  </a>
-                  <div class="flex-1 relative hidden md:flex items-center justify-center">
-                     <ul class="mx-auto inline-flex gap-6 text-sm font-light">
-                        <li><a href="">Welcome</a></li>
-                        <li><a onclick="showSection('about')" href="#about">Who are we?</a></li>
-                        <li><a onclick="showSection('plans')" href="#plans">Plans</a></li>
-                        <li><a onclick="showSection('mission')" class="font-bold relative after:h-px after:content-[''] after:w-full after:absolute after:top-full after:bg-accent-500 after:left-0 after:translate-y-1" href="#mission">Mission</a></li>
-                     </ul>
-                     <ul class="absolute right-0">
-                        <li class="relative"><a class=" h-10 rounded-lg flex items-center justify-center text-base bg-accent-500 leading-none px-12 uppercase" href="">Contact</a></li>
-                     </ul>
-                  </div>
-               </nav>
-            </div>
-         </header>
-          <section class="h-dvh w-dvw max-h-[80rem] relative">
-            <div class="absolute inset-0 z-[1]">
-               <img class="h-full w-full object-cover object-center" src="https://media.istockphoto.com/id/470062516/photo/strong-man.jpg?s=2048x2048&w=is&k=20&c=WVVPhFceGiTlJOkiXr00i0mtUHYEmC-pqIdiNqcUKfA=" alt="">
-            </div>
-
-<section class="bg-transparent dark:bg-transparent" style="position: relative; z-index: 10; padding-top:50px" >
-    <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-        <div class="mt-4 md:mt-0">
-         <h2 class="font-extrabold text-3xl text-accent-700 pt-20 mt-10">Our Mission</h2>
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white dark:text-white">It's either 'One Day' or 'Day One'</h2>
-            <p class="mb-6 font-dark white md:text-lg dark:text-white">Our mission is to empower individuals to lead healthier, happier lives by providing a comprehensive fitness platform that offers personalized workout plans, nutrition guidance, and a supportive community. We believe in making fitness accessible to everyone, regardless of their starting point, and we strive to foster sustainable habits that inspire lifelong wellness..</p>
-            <a href="#"> <button class="inline-flex items-center text-white bg-orange-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-900">
-                Get started
-                <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </button>
+<div i>
+   <header class="w-dvw absolute top-0 left-1/2 -translate-x-1/2 z-[1000] py-4">
+      <div class="max-w-[120rem] text-gray-50 px-6 md:px-8 lg:px-10">
+         <nav class="w-full flex flex-row items-center font-sans">
+            <a class="text-gray-50" href="/">
+               <svg class="h-8 w-8" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="94" y="81" width="40" height="350" fill="currentColor"></rect>
+                  <rect x="264" y="81" width="40" height="350" fill="currentColor"></rect>
+                  <circle cx="199" cy="131" r="50" fill="currentColor"></circle>
+                  <circle cx="199" cy="246" r="50" fill="currentColor"></circle>
+                  <circle cx="369" cy="131" r="50" fill="currentColor"></circle>
+                  <circle cx="369" cy="246" r="50" fill="currentColor"></circle>
+               </svg>
             </a>
-        </div>
-    </div>
-        </section>
+            <div class="flex-1 relative hidden md:flex items-center justify-center">
+               <ul class="mx-auto inline-flex gap-6 text-sm font-light">
+                  <li><a href="">Welcome</a></li>
+                  <li><a onclick="showSection('about')" href="#about">Who are we?</a></li>
+                  <li><a onclick="showSection('plans')" href="#plans">Plans</a></li>
+                  <li><a onclick="showSection('mission')" class="font-bold relative after:h-px after:content-[''] after:w-full after:absolute after:top-full after:bg-accent-500 after:left-0 after:translate-y-1" href="#mission">Mission</a></li>
+               </ul>
+               <ul class="absolute right-0">
+                  <li class="relative"><a class=" h-10 rounded-lg flex items-center justify-center text-base bg-accent-500 leading-none px-12 uppercase" href="">Contact</a></li>
+               </ul>
+            </div>
+         </nav>
       </div>
-   </section>
-
-
-
-   <section id="user_data" class="bg-black dark:bg-black">
-      <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
-            <dl class="grid max-w-screen-md gap-8 mx-auto text-white sm:grid-cols-3 dark:text-white">
-               <div class="flex flex-col items-center justify-center">
-                  <span class="mb-2 text-3xl md:text-4xl font-extrabold purecounter" data-purecounter-start="0" data-purecounter-end="1893" data-purecounter-duration="1">+</span>
-                  <dd class="font-light text-white dark:text-white">Users</dd>
-               </div>
-               <div class="flex flex-col items-center justify-center">
-                  <span class="mb-2 text-3xl md:text-4xl font-extrabold purecounter" data-purecounter-start="0" data-purecounter-end="9438" data-purecounter-duration="1">+</span>
-                  <dd class="font-light text-white dark:text-white">Workouts Logged</dd>
-               </div>
-               <div class="flex flex-col items-center justify-center">
-                  <span class="mb-2 text-3xl md:text-4xl font-extrabold purecounter" data-purecounter-start="0" data-purecounter-end="19294" data-purecounter-duration="1">+</span>
-                  <dd class="font-light text-white dark:text-white">Achievements</dd>
-               </div>
-            </dl>
+   </header>
+   <section class="h-dvh w-dvw max-h-[80rem] relative">
+      <div class="absolute inset-0 z-[1]">
+         <img class="h-full w-full object-cover object-center" src="https://images.pexels.com/photos/4401815/pexels-photo-4401815.jpeg" alt="">
       </div>
-   </section>
+      <section class="bg-transparent dark:bg-transparent" style="position: relative; z-index: 10; padding-top:50px" >
+         <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+            <div class="mt-4 md:mt-0">
+               <h2 class="font-extrabold text-2xl text-accent-700 pt-20 mt-10">Mission</h2>
+               <h2 class="text-4xl tracking-tight font-extrabold text-white dark:text-white mb-1">'One Day' or 'Day One'....</h2>
+               <span class="block text-right text-white mb-4">- Dwayne 'The Rock' Johnson</span>
+               <p class="mb-6 font-dark white md:text-lg dark:text-white">Our mission is to empower individuals to lead healthier, happier lives by providing a comprehensive fitness platform that offers personalized workout plans, nutrition guidance, and a supportive community. We believe in making fitness accessible to everyone, regardless of their starting point, and we strive to foster sustainable habits that inspire lifelong wellness..</p>
+               <a href="#">
+                  <button class="inline-flex items-center text-white bg-orange-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-900">
+                     Get started
+                     <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </button>
+               </a>
+            </div>
+         </div>
+      </section>
+</div>
+<section id="user_data" class="bg-black dark:bg-black">
+<div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
+<dl class="grid max-w-screen-md gap-8 mx-auto text-white sm:grid-cols-3 dark:text-white">
+<div class="flex flex-col items-center justify-center">
+<span class="mb-2 text-3xl md:text-4xl font-extrabold purecounter" data-purecounter-start="0" data-purecounter-end="1893" data-purecounter-duration="1">+</span>
+<dd class="font-light text-white dark:text-white">Users</dd>
+</div>
+<div class="flex flex-col items-center justify-center">
+<span class="mb-2 text-3xl md:text-4xl font-extrabold purecounter" data-purecounter-start="0" data-purecounter-end="9438" data-purecounter-duration="1">+</span>
+<dd class="font-light text-white dark:text-white">Workouts Logged</dd>
+</div>
+<div class="flex flex-col items-center justify-center">
+<span class="mb-2 text-3xl md:text-4xl font-extrabold purecounter" data-purecounter-start="0" data-purecounter-end="19294" data-purecounter-duration="1">+</span>
+<dd class="font-light text-white dark:text-white">Achievements</dd>
+</div>
+</dl>
+</div>
+</section>
+</section>
+
+
 
 
      <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
