@@ -9,9 +9,9 @@ app.secret_key = 'Secret_Key'
 def homepage():
     return render_template('homepage.html')
 
-@app.route('/1')
-def homepage2():
-    return render_template('1.html')
+@app.route('/login')
+def login():
+    return render_template('login.html')
 
 
 if __name__ == '__main__':
