@@ -1,0 +1,111 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>fiT - Dashboard</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="https://cdn.jsdelivr.net/npm/purecounterjs/dist/purecounter.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+      <script>
+         tailwind.config = {
+           theme: {
+             extend: {
+               colors: {
+                 accent: {"50":"#fff5f0","100":"#ffd6c2","200":"#feb795","300":"#fe9868","400":"#fd783c","500":"#fb580f","600":"#db4603","700":"#b03802","800":"#862b01","900":"#5a1d00","950":"#2f0f00"}
+               }
+             }
+           }
+         }
+          function showSection(sectionId) {
+          // Hide both sections first
+          document.getElementById('sign-in').style.display = 'none';
+          document.getElementById('sign-up').style.display = 'none';
+
+          // Show the clicked section
+          document.getElementById(sectionId).style.display = 'block';
+        }
+        window.onload = function() {
+            // Hide the About, Plans, and Mission sections by default
+            document.getElementById('about').style.display = 'none';
+}
+
+      </script>
+   </head>
+<body>
+<section id="header">
+<header class="w-dvw absolute top-0 left-1/2 -translate-x-1/2 z-[1000] py-4">
+            <div class="max-w-[120rem] text-gray-50 px-6 md:px-8 lg:px-10">
+            <nav class="bg-black dark:bg-black fixed w-full z-20 top-0 start-0 ">
+              <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <!-- Logo and brand -->
+                <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                  <svg class="h-8 w-8" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="94" y="81" width="40" height="350" fill="currentColor"></rect>
+                    <rect x="264" y="81" width="40" height="350" fill="currentColor"></rect>
+                    <circle cx="199" cy="131" r="50" fill="currentColor"></circle>
+                    <circle cx="199" cy="246" r="50" fill="currentColor"></circle>
+                    <circle cx="369" cy="131" r="50" fill="currentColor"></circle>
+                    <circle cx="369" cy="246" r="50" fill="currentColor"></circle>
+                  </svg>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r to-green-400 from-yellow-100 text-2xl font-extrabold">fiT</span>
+                </a>
+
+                <div class="flex md:order-2 space-x-3 rtl:space-x-reverse">
+
+            <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer" src="https://bookmybus.up.railway.app/static/images/rohit.jpeg    " alt="User dropdown">
+
+            <!-- Dropdown menu -->
+            <div id="userDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                  <div>{{ current_user.name.title() }}</div>
+                  <div class="font-medium truncate">{{ current_user.email}}</div>
+                </div>
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">My Profile</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Achievements</a>
+                  </li>
+                </ul>
+                <div class="py-1">
+                  <a href="/logout" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                </div>
+            </div>
+
+    </div>
+          </div>
+            </nav>
+            </div>
+         </header>
+</section>
+
+<section id="cover" class="bg-black dark:bg-black w-full pt-10" >
+    <div class="grid w-full max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+        <div class="mr-auto place-self-center lg:col-span-7">
+            <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"><span class="text-transparent bg-clip-text bg-gradient-to-r to-green-400 from-yellow-100">fiT</span> helps you in achieving your goals</h1>
+            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">fiT helps you conquer your fitness journey, from cultivating endurance to building strength and improving overall fitness.</p>
+            <a href="#" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-green-700 hover:bg-green-900 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                Get started
+                <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </a>
+            <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-red-700 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-red-800 dark:hover:bg-red-900/40 dark:focus:ring-red-800">
+                My Progress
+            </a>
+        </div>
+        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+            <img src="https://images.pexels.com/photos/15561868/pexels-photo-15561868/free-photo-of-black-and-white-photo-of-a-shirtless-muscular-man-standing-in-sunlight.jpeg" alt="mockup">
+        </div>
+    </div>
+</section>
+
+
+
+<!-- JavaScript to toggle dropdown and close on outside click -->
+     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+</body>
+</html>
