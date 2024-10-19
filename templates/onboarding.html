@@ -114,10 +114,22 @@
                         <span class="text-transparent bg-clip-text bg-gradient-to-r to-green-400 from-yellow-100">Details</span>
                     </h1>
                     <form class="space-y-6 md:space-y-6" action="/onboarding" method="POST">
+                        <!--Name and Gender Input-->
+                        <div class="flex space-x-4">
+                            <div class="relative  w-1/2">
+                                <input type="text" id="floating_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                                <label for="floating_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Floating filled</label>
+                            </div>
+
+                            <div class="relative  w-1/2">
+                                <input type="number" name="age" id="age" class="block pr-16 px-3 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-orange peer no-spinners" placeholder=" " />
+                                <label for="age" class="absolute text-sm font-medium text-white dark:text-white duration-300 transform -translate-y-4 scale-75 top-3 z-10 origin-[0] bg-transparent dark:bg-black px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-3 peer-focus:scale-75 peer-focus:-translate-y-4 " style="margin-left:10px ">Age</label>
+                            </div>
+                        </div>
                         <!-- Weight input -->
                     <div class="relative">
                         <input type="number" name="weight" id="weight" class="block pr-16 px-3 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-orange peer no-spinners" placeholder=" " />
-                        <label for="weight" class="absolute text-md font-medium text-white dark:text-white duration-300 transform -translate-y-4 scale-75 top-3 z-10 origin-[0] bg-transparent dark:bg-black px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-3 peer-focus:scale-75 peer-focus:-translate-y-4">Weight</label>
+                        <label for="weight" class="absolute text-sm font-medium text-white dark:text-white duration-300 transform -translate-y-4 scale-75 top-3 z-10 origin-[0] bg-transparent dark:bg-black px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-3 peer-focus:scale-75 peer-focus:-translate-y-4 " style="margin-left:10px ">Weight</label>
 
                         <!-- Dropdown for kg/lbs -->
                         <select name="unit-weight" id="unit-weight" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black border-none text-white dark:text-white dark:bg-black focus:outline-none text-sm">
@@ -128,7 +140,7 @@
                         <!-- Height input -->
                     <div class="relative">
                         <input type="number" name="height" id="height" class="block pr-16 px-3 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-orange peer" placeholder=" " />
-                        <label for="height" class="absolute text-md font-medium text-white dark:text-white duration-300 transform -translate-y-4 scale-75 top-3 z-10 origin-[0] bg-transparent dark:bg-black px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-3 peer-focus:scale-75 peer-focus:-translate-y-4">Height</label>
+                        <label for="height" class="absolute text-sm font-medium text-white dark:text-white duration-300 transform -translate-y-4 scale-75 top-3 z-10 origin-[0] bg-transparent dark:bg-black px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-3 peer-focus:scale-75 peer-focus:-translate-y-4" style="margin-left:10px">Height</label>
 
                         <!-- Dropdown for kg/lbs -->
                         <select name="unit-height" id="unit-height" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black border-none text-white dark:text-white dark:bg-black focus:outline-none text-sm">
@@ -138,7 +150,7 @@
                     </div>
                         <div>
                        <label for="activity-level" class="block pb-1 text-sm font-medium text-gray-900 dark:text-white"></label>
-                        <select required id="activity-level" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <select required id="activity-level" class="bg-black border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-black dark:border-gray-600 dark:placeholder-black dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                             <option selected disabled>Choose your activity level</option>
                             <option value="sedentary">Sedentary (little to no exercise)</option>
                             <option value="lightly_active">Lightly active (light exercise/sports 1-3 days/week)</option>
