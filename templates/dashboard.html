@@ -16,22 +16,9 @@
              }
            }
          }
-          function showSection(sectionId) {
-          // Hide both sections first
-          document.getElementById('sign-in').style.display = 'none';
-          document.getElementById('sign-up').style.display = 'none';
-
-          // Show the clicked section
-          document.getElementById(sectionId).style.display = 'block';
-        }
-        window.onload = function() {
-            // Hide the About, Plans, and Mission sections by default
-            document.getElementById('about').style.display = 'none';
-}
-
       </script>
    </head>
-<body>
+<body class="bg-black">
 <section id="header">
 <header class="w-dvw absolute top-0 left-1/2 -translate-x-1/2 z-[1000] py-4">
             <div class="max-w-[120rem] text-gray-50 px-6 md:px-8 lg:px-10">
@@ -82,16 +69,11 @@
             </div>
          </header>
 </section>
-
 <section id="cover" class="bg-black dark:bg-black w-full pt-10" >
     <div class="grid w-full max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
         <div class="mr-auto place-self-center lg:col-span-7">
             <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"><span class="text-transparent bg-clip-text bg-gradient-to-r to-green-400 from-yellow-100">fiT</span> helps you in achieving your goals</h1>
             <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">fiT helps you conquer your fitness journey, from cultivating endurance to building strength and improving overall fitness.</p>
-            <a href="#" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-green-700 hover:bg-green-900 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                Get started
-                <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </a>
             <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-red-700 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-red-800 dark:hover:bg-red-900/40 dark:focus:ring-red-800">
                 My Progress
             </a>
@@ -101,8 +83,6 @@
         </div>
     </div>
 </section>
-
-
 
 <!-- JavaScript to toggle dropdown and close on outside click -->
      <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>

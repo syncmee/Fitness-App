@@ -1,0 +1,165 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>fiT - Onboarding</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="https://cdn.jsdelivr.net/npm/purecounterjs/dist/purecounter.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+      <script>
+         tailwind.config = {
+           theme: {
+             extend: {
+               colors: {
+                 accent: {"50":"#fff5f0","100":"#ffd6c2","200":"#feb795","300":"#fe9868","400":"#fd783c","500":"#fb580f","600":"#db4603","700":"#b03802","800":"#862b01","900":"#5a1d00","950":"#2f0f00"}
+               }
+             }
+           }
+         }
+      </script>
+       <style>
+    /* Hide the spinners for Chrome, Safari, Edge, Opera */
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Hide the spinners for Firefox */
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+   html {
+    scroll-behavior: smooth;
+}
+</style>
+</head>
+<body>
+<section id="header">
+<header class="w-dvw absolute top-0 left-1/2 -translate-x-1/2 z-20 py-4">
+            <div class="max-w-[120rem] text-gray-50 px-6 md:px-8 lg:px-10">
+            <nav class="bg-black dark:bg-black fixed w-full z-20 top-0 start-0 ">
+              <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <!-- Logo and brand -->
+                <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                  <svg class="h-8 w-8" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="94" y="81" width="40" height="350" fill="currentColor"></rect>
+                    <rect x="264" y="81" width="40" height="350" fill="currentColor"></rect>
+                    <circle cx="199" cy="131" r="50" fill="currentColor"></circle>
+                    <circle cx="199" cy="246" r="50" fill="currentColor"></circle>
+                    <circle cx="369" cy="131" r="50" fill="currentColor"></circle>
+                    <circle cx="369" cy="246" r="50" fill="currentColor"></circle>
+                  </svg>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r to-green-400 from-yellow-100 text-2xl font-extrabold">fiT</span>
+                </a>
+
+                <div class="flex md:order-2 space-x-3 rtl:space-x-reverse">
+
+            <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer" src="https://bookmybus.up.railway.app/static/images/rohit.jpeg    " alt="User dropdown">
+
+            <!-- Dropdown menu -->
+            <div id="userDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                  <div>{{ current_user.name.title() }}</div>
+                  <div class="font-medium truncate">{{ current_user.email}}</div>
+                </div>
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">My Profile</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Achievements</a>
+                  </li>
+                </ul>
+                <div class="py-1">
+                  <a href="/logout" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                </div>
+            </div>
+
+    </div>
+          </div>
+            </nav>
+            </div>
+         </header>
+</section>
+<section id="onboarding-cover" class="bg-black dark:bg-black w-full pt-10" >
+    <div class="grid w-full max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+        <div class="mr-auto place-self-center lg:col-span-7">
+            <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"><span class="text-transparent bg-clip-text bg-gradient-to-r to-green-400 from-yellow-100">fiT</span> helps you in achieving your goals</h1>
+            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">fiT helps you conquer your fitness journey, from cultivating endurance to building strength and improving overall fitness.</p>
+            <a href="#onboarding-body-composition" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-red-700 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-red-800 dark:hover:bg-red-900/40 dark:focus:ring-red-800">
+                Get Started
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+                </svg>
+            </a>
+        </div>
+        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+            <img src="https://images.pexels.com/photos/15561868/pexels-photo-15561868/free-photo-of-black-and-white-photo-of-a-shirtless-muscular-man-standing-in-sunlight.jpeg" alt="mockup">
+        </div>
+    </div>
+</section>
+<div class="relative inset-0 z-[1] h-screen">
+    <img class="h-full w-full object-cover object-center" src="https://images.pexels.com/photos/4761598/pexels-photo-4761598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+
+    <!-- Section on top of the image -->
+    <section id="onboarding-body-composition" class="absolute inset-0  items-center justify-center z-[2]">
+        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+            <div class="w-full bg-white rounded-lg shadow dark:border sm:max-w-md xl:max-w-lg lg:max-w-md xl:p-0 dark:bg-black/90 dark:border-white">
+                <div class="p-8 space-y-6 md:space-y-8">
+                    <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white text-center">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r to-green-400 from-yellow-100">Details</span>
+                    </h1>
+                    <form class="space-y-6 md:space-y-6" action="/onboarding" method="POST">
+                        <!-- Weight input -->
+                    <div class="relative">
+                        <input type="number" name="weight" id="weight" class="block pr-16 px-3 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-orange peer no-spinners" placeholder=" " />
+                        <label for="weight" class="absolute text-md font-medium text-white dark:text-white duration-300 transform -translate-y-4 scale-75 top-3 z-10 origin-[0] bg-transparent dark:bg-black px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-3 peer-focus:scale-75 peer-focus:-translate-y-4">Weight</label>
+
+                        <!-- Dropdown for kg/lbs -->
+                        <select name="unit-weight" id="unit-weight" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black border-none text-white dark:text-white dark:bg-black focus:outline-none text-sm">
+                            <option value="kg">in kg</option>
+                            <option value="lbs">in lbs</option>
+                        </select>
+                    </div>
+                        <!-- Height input -->
+                    <div class="relative">
+                        <input type="number" name="height" id="height" class="block pr-16 px-3 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-orange peer" placeholder=" " />
+                        <label for="height" class="absolute text-md font-medium text-white dark:text-white duration-300 transform -translate-y-4 scale-75 top-3 z-10 origin-[0] bg-transparent dark:bg-black px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-3 peer-focus:scale-75 peer-focus:-translate-y-4">Height</label>
+
+                        <!-- Dropdown for kg/lbs -->
+                        <select name="unit-height" id="unit-height" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black border-none text-white dark:text-white dark:bg-black focus:outline-none text-sm">
+                            <option value="kg">in cm</option>
+                            <option value="lbs">in ft</option>
+                        </select>
+                    </div>
+                        <div>
+                       <label for="activity-level" class="block pb-1 text-sm font-medium text-gray-900 dark:text-white"></label>
+                        <select required id="activity-level" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option selected disabled>Choose your activity level</option>
+                            <option value="sedentary">Sedentary (little to no exercise)</option>
+                            <option value="lightly_active">Lightly active (light exercise/sports 1-3 days/week)</option>
+                            <option value="moderately_active">Moderately active (moderate exercise/sports 3-5 days/week)</option>
+                            <option value="very_active">Very active (hard exercise/sports 6-7 days a week)</option>
+                            <option value="super_active">Super active (very hard exercise/sports and a physical job)</option>
+                        </select>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="w-full text-black bg-gradient-to-r from-red-400 to-orange-400 hover:bg-gradient-to-l hover:from-red-200 hover:to-orange-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 rounded-lg text-sm px-5 py-3 text-center font-bold">
+                            Next
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+</body>
+</html>

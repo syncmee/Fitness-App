@@ -89,10 +89,17 @@ def login():
     # If the request method is GET, just show the login/sign-up page
     return render_template('login.html')
 
-@app.route('/dashboard/<user>', methods=['GET'])
+@app.route('/dashboard/<user>', methods=['GET', 'POST'])
 @login_required  # Protect this route
 def dashboard(user):
     return render_template('dashboard.html', user=current_user)
+
+@app.route('/onboarding',methods=['GET', 'POST'])
+@login_required
+def onboarding():
+    return render_template('onboarding.html')
+
+
 
 @app.route('/logout')
 @login_required
