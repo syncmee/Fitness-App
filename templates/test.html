@@ -1,0 +1,189 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>fiT - Onboarding</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="https://cdn.jsdelivr.net/npm/purecounterjs/dist/purecounter.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+</head>
+<body class="bg-black">
+<!-- Step Progress -->
+    <div class="max-w-md mx-auto mt-10 p-5 bg-white shadow-md rounded-lg">
+        <div id="step-progress" class="flex justify-between items-center mb-8">
+            <span id="step1" class="bg-blue-500 text-white px-3 py-2 rounded-full">1</span>
+            <span id="step2" class="bg-gray-300 text-black px-3 py-2 rounded-full">2</span>
+            <span id="step3" class="bg-gray-300 text-black px-3 py-2 rounded-full">3</span>
+        </div>
+
+        <!-- Form Container -->
+        <form id="onboarding-form">
+
+            <!-- Step 1: Personal Information -->
+            <div id="step-1" class="step">
+                <h2 class="text-xl font-bold mb-4">Step 1: Fill In Your Details</h2>
+
+                <div class="mb-4">
+                    <label class="block text-gray-700">Gender:</label>
+                    <div class="flex space-x-4">
+                        <label>
+                            <input type="radio" name="gender" value="male" required> Male
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female" required> Female
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Age Slider -->
+                <div class="mb-4">
+                    <label for="age-slider" class="pb-5 block text-gray-700">Age: <span id="age-value" class="font-bold"></span></label>
+                    <input type="range" id="age-slider" name="age" min="18" max="100" value="25" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                </div>
+
+                <button type="button" id="next-1" class="w-full bg-blue-500 text-white py-2 mt-4 rounded-lg">Next</button>
+            </div>
+
+            <!-- Step 2: Body Composition -->
+            <div id="step-2" class="step hidden">
+                <h2 class="text-xl font-bold mb-4">Step 2: Body Composition</h2>
+                <div class="mb-4">
+                    <label for="weight" class="block text-gray-700">Weight:</label>
+                    <div class="relative">
+                        <input type="number" id="weight" name="weight" class="block w-full mt-1 p-2 border border-gray-300 rounded-lg" required>
+                        <select name="weight-unit" id="weight-unit" class="absolute right-2 top-2 bg-gray-100 border-none text-gray-700">
+                            <option value="kg">kg</option>
+                            <option value="lbs">lbs</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label for="height" class="block text-gray-700">Height:</label>
+                    <div class="relative">
+                        <input type="number" id="height" name="height" class="block w-full mt-1 p-2 border border-gray-300 rounded-lg" required>
+                        <select name="height-unit" id="height-unit" class="absolute right-2 top-2 bg-gray-100 border-none text-gray-700">
+                            <option value="cm">cm</option>
+                            <option value="ft">ft</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="button" id="prev-1" class="w-full bg-gray-500 text-white py-2 mt-4 rounded-lg mb-2">Previous</button>
+                <button type="button" id="next-2" class="w-full bg-blue-500 text-white py-2 mt-4 rounded-lg">Next</button>
+            </div>
+
+            <!-- Step 3: Activity Level -->
+            <div id="step-3" class="step hidden">
+                <h2 class="text-xl font-bold mb-4">Step 3: Activity Level</h2>
+                <div class="mb-4">
+                    <label for="activity-level" class="block text-gray-700">Choose your activity level:</label>
+                    <select id="activity-level" class="block w-full mt-1 p-2 border border-gray-300 rounded-lg" required>
+                        <option selected disabled>Choose your activity level</option>
+                        <option value="sedentary">Sedentary (little to no exercise)</option>
+                        <option value="light">Light (1-3 days per week)</option>
+                        <option value="moderate">Moderate (3-5 days per week)</option>
+                        <option value="very_active">Very Active (6-7 days per week)</option>
+                        <option value="super_active">Super Active (physical job + exercise)</option>
+                    </select>
+                </div>
+                <button type="button" id="prev-2" class="w-full bg-red-600 text-white py-2 mt-4 rounded-lg mb-2">Previous</button>
+                <button type="submit" id="submit" class="w-full bg-red-600 text-white py-2 mt-4 rounded-lg">Submit</button>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+ <script>
+        const steps = document.querySelectorAll('.step');
+        let currentStep = 0;
+
+        // Show the current step
+        const showStep = (step) => {
+            steps.forEach((el, index) => {
+                if (index === step) {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+            updateProgress();
+        };
+
+        // Update step progress bar
+        const updateProgress = () => {
+            document.getElementById('step1').classList.toggle('bg-blue-500', currentStep === 0);
+            document.getElementById('step2').classList.toggle('bg-blue-500', currentStep === 1);
+            document.getElementById('step3').classList.toggle('bg-blue-500', currentStep === 2);
+        };
+
+        // Navigate through the steps
+        document.getElementById('next-1').addEventListener('click', () => {
+            if (validateStep(1)) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        });
+        document.getElementById('next-2').addEventListener('click', () => {
+            if (validateStep(2)) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        });
+        document.getElementById('prev-1').addEventListener('click', () => {
+            currentStep--;
+            showStep(currentStep);
+        });
+        document.getElementById('prev-2').addEventListener('click', () => {
+            currentStep--;
+            showStep(currentStep);
+        });
+
+        // Form validation per step
+        const validateStep = (step) => {
+            const inputs = steps[step - 1].querySelectorAll('input, select');
+            let valid = true;
+            inputs.forEach(input => {
+                if (!input.value) {
+                    input.classList.add('border-red-500');
+                    valid = false;
+                } else {
+                    input.classList.remove('border-red-500');
+                }
+            });
+            return valid;
+        };
+
+        // Initialize form
+        showStep(currentStep);
+
+        // Form submission
+        document.getElementById('onboarding-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Form submitted successfully!');
+        });
+
+    </script>
+<script>
+    const ageSlider = document.getElementById('age-slider');
+    const ageValue = document.getElementById('age-value');
+
+    // Initial display
+    ageValue.textContent = ageSlider.value;
+
+    // Update the displayed age when the slider is adjusted
+    ageSlider.addEventListener('input', () => {
+        ageValue.textContent = ageSlider.value;
+    });
+</script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+</body>
+</html>

@@ -47,6 +47,10 @@ def load_user(user_id):
 def homepage():
     return render_template('homepage.html')
 
+@app.route('/test')
+def test():
+    return render_template('test.html')
+
 # Define the login route
 @app.route('/login', methods=['GET', 'POST'])
 def login():
