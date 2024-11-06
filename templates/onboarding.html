@@ -16,7 +16,20 @@
              }
            }
          }
+        function showSection(sectionId) {
+          // Hide both sections first
+          document.getElementById('onboarding-body-composition').style.display = 'none';
+          document.getElementById('onboarding-nutrition').style.display = 'none';
+          document.getElementById('onboarding-goals').style.display = 'none';
+          document.getElementById('onboarding-submit').style.display = 'none';
 
+          // Show the clicked section
+          document.getElementById(sectionId).style.display = 'block';
+        }
+        window.onload = function() {
+            // Hide the About, Plans, and Mission sections by default
+            document.getElementById('about').style.display = 'none';
+}
 
       </script>
        <style>
@@ -33,12 +46,6 @@
     }
    html {
     scroll-behavior: smooth;
-}
-.hidden-section {
-    display: none;
-}
-.active-section {
-    display: block;
 }
 </style>
 </head>
@@ -114,7 +121,7 @@
 <div class="relative inset-0 z-[1] h-screen">
     <img class="h-full w-full object-cover object-center" src="https://images.pexels.com/photos/4761598/pexels-photo-4761598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
     <!-- Section on top of the image -->
-    <section id="onboarding-body-composition" class="active-section absolute inset-0  items-center justify-center z-[2]">
+    <section id="onboarding-body-composition" class=" absolute inset-0  items-center justify-center z-[2]">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
             <div class="w-full bg-white rounded-lg shadow dark:border sm:max-w-md xl:max-w-lg lg:max-w-md xl:p-0 dark:bg-black/90 dark:border-white">
                 <div class="p-8 space-y-6 md:space-y-8">
@@ -125,23 +132,23 @@
                         <div class="flex space-x-4">
                             <div class="relative  w-1/2">
                                 <div >
-                                    <input id="inline-radio" required type="radio" value="" name="gender" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <input id="inline-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                     <label for="inline-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Male</label>
                                 </div>
                                 <div >
-                                    <input id="inline-2-radio" required type="radio" value="" name="gender" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <input id="inline-2-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                     <label for="inline-2-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Female</label>
                                 </div>
                             </div>
 
                             <div class="relative  w-1/2">
-                                <input type="number" required name="age" id="age" class="block pr-16 px-3 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-orange peer no-spinners" placeholder=" " />
+                                <input type="number" name="age" id="age" class="block pr-16 px-3 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-orange peer no-spinners" placeholder=" " />
                                 <label for="age" class="absolute text-sm font-medium text-white dark:text-white duration-300 transform -translate-y-4 scale-75 top-3 z-10 origin-[0] bg-transparent dark:bg-black px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-3 peer-focus:scale-75 peer-focus:-translate-y-4 " style="margin-left:10px ">Age</label>
                             </div>
                         </div>
                         <!-- Weight input -->
                     <div class="relative ">
-                        <input type="number" required name="weight" id="weight" class="block pr-16 px-3 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-orange peer no-spinners" placeholder=" " />
+                        <input type="number" name="weight" id="weight" class="block pr-16 px-3 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-orange peer no-spinners" placeholder=" " />
                         <label for="weight" class="absolute text-sm font-medium text-white dark:text-white duration-300 transform -translate-y-4 scale-75 top-3 z-10 origin-[0] bg-transparent dark:bg-black px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-3 peer-focus:scale-75 peer-focus:-translate-y-4 " style="margin-left:10px ">Weight</label>
 
                         <!-- Dropdown for kg/lbs -->
@@ -174,14 +181,14 @@
                         </div>
 
                         <!-- Submit button -->
-                        <button type="submit" onclick="goToNextStep('onboarding-nutrition')" class="w-full text-black bg-gradient-to-r from-red-400 to-orange-400 hover:bg-gradient-to-l hover:from-red-200 hover:to-orange-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 rounded-lg text-sm px-5 py-3 text-center font-bold">
+                        <button type="submit" onclick="showSection('onboarding-nutrition')" class="w-full text-black bg-gradient-to-r from-red-400 to-orange-400 hover:bg-gradient-to-l hover:from-red-200 hover:to-orange-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 rounded-lg text-sm px-5 py-3 text-center font-bold">
                             Next
                         </button>
                 </div>
             </div>
         </div>
     </section>
-    <section id="onboarding-nutrition" class="hidden-section absolute inset-0  items-center justify-center z-[2]">
+    <section id="onboarding-nutrition" class="hidden absolute inset-0  items-center justify-center z-[2]">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
             <div class="w-full bg-white rounded-lg shadow dark:border sm:max-w-lg xl:max-w-2xl lg:max-w-xl xl:p-0 dark:bg-black/90 dark:border-white">
                 <div class="p-8 space-y-6 md:space-y-8">
@@ -270,14 +277,20 @@
 
 
                         <!-- Submit button -->
-                        <button type="button"onclick="goToNextStep('onboarding-goals')" class="w-full text-black bg-gradient-to-r from-red-400 to-orange-400 hover:bg-gradient-to-l hover:from-red-200 hover:to-orange-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 rounded-lg text-sm px-5 py-3 text-center font-bold">
-                            Next
-                        </button>
+                        <div class="flex space-x-4">
+                            <button type="button" onclick="showSection('onboarding-body-composition')" class="w-full text-black bg-gradient-to-r from-red-400 to-orange-400 hover:bg-gradient-to-l hover:from-red-200 hover:to-orange-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 rounded-lg text-sm px-5 py-3 text-center font-bold">
+                                Previous
+                            </button>
+                            <button type="button" onclick="showSection('onboarding-goals')" class="w-full text-black bg-gradient-to-r from-red-400 to-orange-400 hover:bg-gradient-to-l hover:from-red-200 hover:to-orange-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 rounded-lg text-sm px-5 py-3 text-center font-bold">
+                                Next
+                            </button>
+                        </div>
+
                 </div>
             </div>
         </div>
     </section>
-    <section id="onboarding-goals" class=" hidden-section absolute inset-0  items-center justify-center z-[2]">
+    <section id="onboarding-goals" class=" hidden absolute inset-0  items-center justify-center z-[2]">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
             <div class="w-full bg-white rounded-lg shadow dark:border sm:max-w-lg xl:max-w-2xl lg:max-w-xl xl:p-0 dark:bg-black/90 dark:border-white">
                 <div class="p-8 space-y-6 md:space-y-8">
@@ -323,16 +336,21 @@
                         </div>
 
 
-
                         <!-- Submit button -->
-                        <button type="button" onclick="goToNextStep('onboarding-submit')" class="w-full text-black bg-gradient-to-r from-red-400 to-orange-400 hover:bg-gradient-to-l hover:from-red-200 hover:to-orange-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 rounded-lg text-sm px-5 py-3 text-center font-bold">
-                            Next
-                        </button>
+                        <div class="flex space-x-4">
+                            <button type="button" onclick="showSection('onboarding-nutrition')" class="w-full text-black bg-gradient-to-r from-red-400 to-orange-400 hover:bg-gradient-to-l hover:from-red-200 hover:to-orange-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 rounded-lg text-sm px-5 py-3 text-center font-bold">
+                                Previous
+                            </button>
+                            <button type="button" onclick="showSection('onboarding-submit')" class="w-full text-black bg-gradient-to-r from-red-400 to-orange-400 hover:bg-gradient-to-l hover:from-red-200 hover:to-orange-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 rounded-lg text-sm px-5 py-3 text-center font-bold">
+                                Next
+                            </button>
+                        </div>
+
                 </div>
             </div>
         </div>
     </section>
-    <section id="onboarding-submit" class="hidden-section absolute inset-0  items-center justify-center z-[2]">
+    <section id="onboarding-submit" class="hidden absolute inset-0  items-center justify-center z-[2]">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
             <div class="w-full bg-white rounded-lg shadow dark:border sm:max-w-lg xl:max-w-2xl lg:max-w-xl xl:p-0 dark:bg-black/90 dark:border-white">
                 <div class="p-8 space-y-6 md:space-y-8">
@@ -362,68 +380,5 @@
 </form>
 
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
-<script>
-    function goToNextStep(nextStepId) {
-    // Select current form step
-    const currentStep = document.querySelector('.active-section');
-
-    // Validate current step inputs
-    if (!validateCurrentStep(currentStep)) {
-        alert('Please fill out all required fields.');
-        return; // If validation fails, prevent step change
-    }
-
-    // Hide current step
-    currentStep.classList.remove('active-section');
-    currentStep.classList.add('hidden-section');
-
-    // Show next step
-    const nextStep = document.getElementById(nextStepId);
-    nextStep.classList.remove('hidden-section');
-    nextStep.classList.add('active-section');
-}
-
-function validateCurrentStep(currentStep) {
-    let allValid = true;
-
-    // Validate required input fields (text, number)
-    const requiredInputs = currentStep.querySelectorAll('input[required]');
-    requiredInputs.forEach((input) => {
-        if (!input.value) {
-            allValid = false;
-            input.classList.add('border-red-500'); // Highlight empty fields
-        } else {
-            input.classList.remove('border-red-500');
-        }
-    });
-
-    // Validate radio button groups
-    const requiredRadios = currentStep.querySelectorAll('input[type="radio"][required]');
-    const radioGroups = [...new Set([...requiredRadios].map(radio => radio.name))]; // Get unique radio groups
-    radioGroups.forEach(group => {
-        const isChecked = currentStep.querySelector(`input[name="${group}"]:checked`);
-        if (!isChecked) {
-            allValid = false;
-            currentStep.querySelector(`input[name="${group}"]`).classList.add('border-red-500'); // Highlight the radio group if none is selected
-        } else {
-            currentStep.querySelector(`input[name="${group}"]`).classList.remove('border-red-500');
-        }
-    });
-
-    // Validate required select dropdowns
-    const requiredSelects = currentStep.querySelectorAll('select[required]');
-    requiredSelects.forEach((select) => {
-        if (!select.value || select.value === "Choose your activity level") {
-            allValid = false;
-            select.classList.add('border-red-500'); // Highlight empty selects
-        } else {
-            select.classList.remove('border-red-500');
-        }
-    });
-
-    return allValid;
-}
-
-</script>
 </body>
 </html>
