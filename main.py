@@ -25,6 +25,8 @@ class User(UserMixin, db.Model):
     name = db.Column(db.String(80), nullable=False, unique=True)
     email = db.Column(db.String(120), nullable=False, unique=True)
     password = db.Column(db.String(255), nullable=False)
+    onboarding = db.Column(db.Boolean, default=False)  # Onboarding status
+
 
     def set_password(self, password):
         """Hashes the password and stores it."""
@@ -68,8 +70,8 @@ def login():
                 flash('Email or Username already exists!', 'error')
                 return redirect(url_for('login'))
 
-            # Create a new user
-            new_user = User(name=name, email=email)
+            # Create a new user with onboarding set to False by default
+            new_user = User(name=name, email=email, onboarding=False)
             new_user.set_password(password)
             db.session.add(new_user)
             db.session.commit()
@@ -84,7 +86,11 @@ def login():
             user = User.query.filter_by(email=email).first()
             if user and user.check_password(password):
                 # User is authenticated, log them in
-                login_user(user)  # This is the key change for Flask-Login
+                login_user(user)
+
+                # Check if onboarding is complete
+                if not user.onboarding:
+                    return redirect(url_for('onboarding'))
                 return redirect(url_for('dashboard', user=current_user.name))
             else:
                 flash('Invalid email or password', 'error')
@@ -92,7 +98,6 @@ def login():
 
     # If the request method is GET, just show the login/sign-up page
     return render_template('login.html')
-
 @app.route('/dashboard/<user>', methods=['GET', 'POST'])
 @login_required  # Protect this route
 def dashboard(user):
