@@ -101,7 +101,8 @@ def login():
 @app.route('/dashboard/<user>', methods=['GET', 'POST'])
 @login_required  # Protect this route
 def dashboard(user):
-    return render_template('dashboard.html', user=current_user)
+    data = [20, 5, 3, 3, 2, 1]
+    return render_template('dashboard.html', user=current_user, data=data)
 
 @app.route('/onboarding',methods=['GET', 'POST'])
 @login_required
