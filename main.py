@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.secret_key = 'Secret_Key'
 
 # SQLite configuration
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///userdata.db'  # Database file
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:mnNKMFXEHyKxnxHLcqcnfqLSHrRgevVA@switchyard.proxy.rlwy.net:18502/railway'  # Database file
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Initialize the database

@@ -7,90 +7,141 @@
       <script src="https://cdn.jsdelivr.net/npm/purecounterjs/dist/purecounter.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
 </head>
-<body class="bg-black">
+<body>
 <!-- Step Progress -->
-    <div class="max-w-md mx-auto mt-10 p-5 bg-white shadow-md rounded-lg">
-        <div id="step-progress" class="flex justify-between items-center mb-8">
-            <span id="step1" class="bg-blue-500 text-white px-3 py-2 rounded-full">1</span>
-            <span id="step2" class="bg-gray-300 text-black px-3 py-2 rounded-full">2</span>
-            <span id="step3" class="bg-gray-300 text-black px-3 py-2 rounded-full">3</span>
-        </div>
+<form class="space-y-6 md:space-y-6" action="/onboarding" method="POST">
 
-        <!-- Form Container -->
-        <form id="onboarding-form">
+    <!-- Basic Info Section -->
+    <section id="onboarding-basic-info" class="absolute inset-0 items-center justify-center z-[2]">
+        <!-- ... (similar structure to previous sections) -->
+        <!-- Include name, age, gender, height, weight inputs -->
+    </section>
 
-            <!-- Step 1: Personal Information -->
-            <div id="step-1" class="step">
-                <h2 class="text-xl font-bold mb-4">Step 1: Fill In Your Details</h2>
+    <!-- Fitness Profile Section -->
+    <section id="onboarding-fitness-profile" class=" absolute inset-0 items-center justify-center z-[2]">
+        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+            <div class="w-full bg-white rounded-lg shadow dark:border sm:max-w-md xl:max-w-lg lg:max-w-md xl:p-0 dark:bg-black/90 dark:border-white">
+                <div class="p-8 space-y-6 md:space-y-8">
+                    <!-- Progress bar -->
+                    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 40%"></div>
+                    </div>
 
-                <div class="mb-4">
-                    <label class="block text-gray-700">Gender:</label>
+                    <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white text-center">
+                        Fitness Profile
+                    </h1>
+
+                    <!-- Fitness Level -->
+                    <div class="space-y-4">
+                        <label class="block text-sm font-medium text-gray-900 dark:text-white">Fitness Level</label>
+                        <select name="fitness_level" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+
+                    <!-- Workout Preferences -->
+                    <div class="space-y-4">
+                        <label class="block text-sm font-medium text-gray-900 dark:text-white">Preferred Workout Style</label>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center">
+                                <input id="gym" type="checkbox" name="workout_style[]" value="gym" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                <label for="gym" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Gym</label>
+                            </div>
+                            <!-- Add other workout style options -->
+                        </div>
+                    </div>
+
+                    <!-- Equipment Availability -->
+                    <div class="space-y-4">
+                        <label class="block text-sm font-medium text-gray-900 dark:text-white">Available Equipment</label>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center">
+                                <input id="dumbbells" type="checkbox" name="equipment[]" value="dumbbells" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                <label for="dumbbells" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Dumbbells</label>
+                            </div>
+                            <!-- Add other equipment options -->
+                        </div>
+                    </div>
+
+                    <!-- Navigation buttons -->
                     <div class="flex space-x-4">
-                        <label>
-                            <input type="radio" name="gender" value="male" required> Male
-                        </label>
-                        <label>
-                            <input type="radio" name="gender" value="female" required> Female
-                        </label>
+                        <button type="button" onclick="showPreviousSection()" class="w-full text-black bg-gradient-to-r from-red-400 to-orange-400 hover:bg-gradient-to-l hover:from-red-200 hover:to-orange-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 rounded-lg text-sm px-5 py-3 text-center font-bold">
+                            Previous
+                        </button>
+                        <button type="button" onclick="showNextSection()" class="w-full text-black bg-gradient-to-r from-red-400 to-orange-400 hover:bg-gradient-to-l hover:from-red-200 hover:to-orange-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 rounded-lg text-sm px-5 py-3 text-center font-bold">
+                            Next
+                        </button>
                     </div>
                 </div>
-
-                <!-- Age Slider -->
-                <div class="mb-4">
-                    <label for="age-slider" class="pb-5 block text-gray-700">Age: <span id="age-value" class="font-bold"></span></label>
-                    <input type="range" id="age-slider" name="age" min="18" max="100" value="25" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
-                </div>
-
-                <button type="button" id="next-1" class="w-full bg-blue-500 text-white py-2 mt-4 rounded-lg">Next</button>
             </div>
+        </div>
+    </section>
 
-            <!-- Step 2: Body Composition -->
-            <div id="step-2" class="step hidden">
-                <h2 class="text-xl font-bold mb-4">Step 2: Body Composition</h2>
-                <div class="mb-4">
-                    <label for="weight" class="block text-gray-700">Weight:</label>
-                    <div class="relative">
-                        <input type="number" id="weight" name="weight" class="block w-full mt-1 p-2 border border-gray-300 rounded-lg" required>
-                        <select name="weight-unit" id="weight-unit" class="absolute right-2 top-2 bg-gray-100 border-none text-gray-700">
-                            <option value="kg">kg</option>
-                            <option value="lbs">lbs</option>
-                        </select>
-                    </div>
+    <!-- Nutrition Goals Section -->
+    <section id="onboarding-nutrition-goals" class="absolute inset-0 items-center justify-center z-[2]">
+        <!-- ... -->
+        <!-- Include macro goals, meal frequency, food exclusions -->
+        <div class="space-y-4">
+            <label class="block text-sm font-medium text-gray-900 dark:text-white">Daily Macronutrient Goals</label>
+            <div class="grid grid-cols-3 gap-4">
+                <div class="relative">
+                    <input type="number" name="protein_goal" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Protein (g)">
                 </div>
-                <div class="mb-4">
-                    <label for="height" class="block text-gray-700">Height:</label>
-                    <div class="relative">
-                        <input type="number" id="height" name="height" class="block w-full mt-1 p-2 border border-gray-300 rounded-lg" required>
-                        <select name="height-unit" id="height-unit" class="absolute right-2 top-2 bg-gray-100 border-none text-gray-700">
-                            <option value="cm">cm</option>
-                            <option value="ft">ft</option>
-                        </select>
-                    </div>
-                </div>
-                <button type="button" id="prev-1" class="w-full bg-gray-500 text-white py-2 mt-4 rounded-lg mb-2">Previous</button>
-                <button type="button" id="next-2" class="w-full bg-blue-500 text-white py-2 mt-4 rounded-lg">Next</button>
+                <!-- Add carbs and fat inputs -->
             </div>
+        </div>
+    </section>
 
-            <!-- Step 3: Activity Level -->
-            <div id="step-3" class="step hidden">
-                <h2 class="text-xl font-bold mb-4">Step 3: Activity Level</h2>
-                <div class="mb-4">
-                    <label for="activity-level" class="block text-gray-700">Choose your activity level:</label>
-                    <select id="activity-level" class="block w-full mt-1 p-2 border border-gray-300 rounded-lg" required>
-                        <option selected disabled>Choose your activity level</option>
-                        <option value="sedentary">Sedentary (little to no exercise)</option>
-                        <option value="light">Light (1-3 days per week)</option>
-                        <option value="moderate">Moderate (3-5 days per week)</option>
-                        <option value="very_active">Very Active (6-7 days per week)</option>
-                        <option value="super_active">Super Active (physical job + exercise)</option>
-                    </select>
-                </div>
-                <button type="button" id="prev-2" class="w-full bg-red-600 text-white py-2 mt-4 rounded-lg mb-2">Previous</button>
-                <button type="submit" id="submit" class="w-full bg-red-600 text-white py-2 mt-4 rounded-lg">Submit</button>
-            </div>
-        </form>
-    </div>
+    <!-- Advanced Metrics Section -->
+    <section id="onboarding-advanced-metrics" class="hidden absolute inset-0 items-center justify-center z-[2]">
+        <!-- ... -->
+        <!-- Include body fat %, activity level, TDEE calculator -->
+        <div class="space-y-4">
+            <label class="block text-sm font-medium text-gray-900 dark:text-white">Activity Level</label>
+            <select name="activity_level" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option value="sedentary">Sedentary</option>
+                <option value="lightly_active">Lightly Active</option>
+                <option value="moderately_active">Moderately Active</option>
+                <option value="very_active">Very Active</option>
+            </select>
+        </div>
+    </section>
 
+    <!-- ... other sections ... -->
+
+
+</form>
+
+<script>
+// JavaScript to handle section navigation
+let currentSection = 0;
+const sections = [
+    'onboarding-basic-info',
+    'onboarding-fitness-profile',
+    'onboarding-nutrition-goals',
+    'onboarding-advanced-metrics',
+    'onboarding-goals',
+    'onboarding-submit'
+];
+
+function showNextSection() {
+    if (currentSection < sections.length - 1) {
+        document.getElementById(sections[currentSection]).classList.add('hidden');
+        currentSection++;
+        document.getElementById(sections[currentSection]).classList.remove('hidden');
+    }
+}
+
+function showPreviousSection() {
+    if (currentSection > 0) {
+        document.getElementById(sections[currentSection]).classList.add('hidden');
+        currentSection--;
+        document.getElementById(sections[currentSection]).classList.remove('hidden');
+    }
+}
+</script>
 
 
 
